@@ -21,6 +21,7 @@ Output: 1
 //calculate the area
 
 
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {
