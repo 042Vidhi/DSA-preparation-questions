@@ -49,3 +49,49 @@ int main() {
 	}
     return 0;
 }
+
+// another approach
+
+/*
+class Solution {
+private:
+    static bool cmp(pair<int,int>&a,pair<int,int>&b)
+    {
+        if(a.second == b.second)
+        return a.first > b.first;
+
+        else
+        return a.second < b.second;
+    }
+
+public:
+    vector<int> frequencySort(vector<int>& nums) {
+        map<int,int>m;
+        vector<pair<int,int>>v;
+
+        for(int i=0;i<nums.size();i++)
+        m[nums[i]]++;
+
+        int k=0;
+        for(auto i:m)
+        {
+            v.push_back({i});
+        }
+
+        sort(v.begin(),v.end(),cmp);
+
+
+        vector<int>ans;
+        for(int i=0;i<v.size();i++)
+        {
+           pair<int,int> p  = v[i];
+           int freq = p.second;
+
+           for(int j=0;j<freq;j++)
+           ans.push_back(p.first);
+        }
+
+        return ans;
+    }
+};
+*/
